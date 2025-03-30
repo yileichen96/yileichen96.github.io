@@ -139,8 +139,8 @@
     <div class='container'>
         <div class='row vspace-top'>
             <div class='col offset-sm-1'>
-                <h1 data-translate="bio">Bio</h1>
-                <p data-translate="bio_content">
+                <h1 data-translate="bio.title">Bio</h1>
+                <p data-translate="bio.content">
                     我目前为上海大学（Shanghai University，SHU）和悉尼科技大学（University of Technology，UTS）双学位联合培养博士研究生，导师为上海大学安平教授与悉尼科技大学Qiang Wu副教授。2018年于上海大学通信与信息工程学院获得工学学士学位。
 		</p>
 		<p>
@@ -148,7 +148,7 @@
 		</p>    
 
                 <div class='vspace-top'>
-                    <h1 data-translate="publications">Publications</h1>
+                    <h1 data-translate="publications.title">Publications</h1>
                 </div>
 
 		<p> * 为共同第一作者</p>
@@ -234,16 +234,24 @@
     // 语言配置
     const translations = {
         en: {
-            bio: "Bio",
-	    bio_content: "I'm currently working toward the collaborative Ph.D. degree between Shanghai University supervised by Prof. Ping An and the University of Technology Sydney supervised by A/Prof. Qiang Wu. Before that, I received my B.E. degree, in 2018, from the School of Communication and Information Engineering, Shanghai University, Shanghai, China.",
-	    publications: "Publications",
+            bio: {
+		    title: "Bio",
+		    content: "I'm currently working toward the collaborative Ph.D. degree between Shanghai University supervised by Prof. Ping An and the University of Technology Sydney supervised by A/Prof. Qiang Wu. Before that, I received my B.E. degree, in 2018, from the School of Communication and Information Engineering, Shanghai University, Shanghai, China.",
+	    },
+	    publications: {
+		    title: "Publications",
+	    },
             lastUpdated: "Last updated December 2023.",
             // 添加其他需要翻译的文本
         },
         zh: {
-            bio: "个人简介",
-	    bio_content: "我目前为上海大学（Shanghai University，SHU）和悉尼科技大学（University of Technology，UTS）双学位联合培养博士研究生，导师为上海大学安平教授与悉尼科技大学Qiang Wu副教授。2018年于上海大学通信与信息工程学院获得工学学士学位。",
-            publications: "发表论文",
+            bio: {
+		    title: "个人简介",
+		    content: "我目前为上海大学（Shanghai University，SHU）和悉尼科技大学（University of Technology，UTS）双学位联合培养博士研究生，导师为上海大学安平教授与悉尼科技大学Qiang Wu副教授。2018年于上海大学通信与信息工程学院获得工学学士学位。",
+	    },
+            publications: {
+		    title: "发表论文",
+	    },
             lastUpdated: "最后更新于2023年12月。",
             // 对应中文翻译
         }
@@ -252,8 +260,10 @@
     function updateContent(lang) {
         // 更新静态文本
         document.querySelectorAll('[data-translate]').forEach(el => {
-            const key = el.getAttribute('data-translate');
-            el.textContent = translations[lang][key];
+        const keys = el.dataset.translate.split('.');
+        let translation = translations[lang];
+        keys.forEach(key => translation = translation[key]);
+        el.textContent = translation;
         });
 
         // 更新动态内容
