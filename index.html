@@ -519,12 +519,12 @@
     };
 
     function updateContent(lang) {
-        // 更新静态文本
+        // 通用翻译处理
         document.querySelectorAll('[data-translate]').forEach(el => {
-        const keys = el.dataset.translate.split('.');
-        let translation = translations[lang];
-        keys.forEach(key => translation = translation[key]);
-        el.textContent = translation;
+            const keys = el.dataset.translate.split('.');
+            let value = translations[lang];
+            keys.forEach(key => value = value?.[key]);
+            if (value) el.innerHTML = value;
         });
 
         // 更新动态内容
