@@ -112,18 +112,10 @@
                 </div>
 
                 <div class="col">
-                  <div id='header-text-name'>
-                      陈亦雷（Yilei Chen）
-                  </div>
-		  <div id='header-text-title'>
-                        Collaborative Ph.D. Student
-                    </div>
-		  <div id='header-text-affiliation'>
-                        Shanghai University; University of Technology Sydney
-                  </div>
-                  <div id='header-text-email'>
-                        yileichen@shu.edu.cn
-                  </div>
+                  <div id='header-text-name' data-translate="header.name"></div>
+                  <div id='header-text-title' data-translate="header.title"></div>
+                  <div id='header-text-affiliation' data-translate="header.affiliation"></div>
+                  <div id='header-text-email' data-translate="header.email"></div>
                   <div>
 		    <a href="docs/cv_yileichen_cn.pdf">[CV]</a>
                     <a href="https://github.com/yileichen96">[GitHub]</a>
@@ -488,6 +480,12 @@
     // 语言配置
     const translations = {
         en: {
+	    header: {
+                name: "Yilei Chen",
+                title: "Collaborative Ph.D. Student",
+                affiliation: "Shanghai University; University of Technology Sydney",
+                email: "yileichen@shu.edu.cn"
+            },
             bio: {
 		    title: "Bio",
 		    content: `I'm currently working toward the collaborative Ph.D. degree between Shanghai University supervised by <a href="https://scie-ie.shu.edu.cn/info/1078/1139.htm">Prof. Ping An</a> and the University of Technology Sydney supervised by <a href="https://profiles.uts.edu.au/qiang.wu">A/Prof. Qiang Wu</a>. Before that, I received my B.E. degree in 2018 from the School of Communication and Information Engineering, Shanghai University.`,
@@ -503,7 +501,13 @@
             // 添加其他需要翻译的文本
         },
         zh: {
-            bio: {
+            header: {
+                name: "陈亦雷（Yilei Chen）",
+                title: "联合培养博士研究生",
+                affiliation: "上海大学；悉尼科技大学",
+                email: "yileichen@shu.edu.cn"
+            },
+	    bio: {
 		    title: "个人简介",
 		    content: `我目前在悉尼科技大学（University of Technology，UTS）攻读上海大学-UTS双学位联合培养博士研究生，导师为上海大学<a href="https://scie-ie.shu.edu.cn/info/1078/1139.htm">安平</a>教授与悉尼科技大学<a href="https://profiles.uts.edu.au/qiang.wu">Qiang Wu</a>副教授。2018年于上海大学通信与信息工程学院获得工学学士学位。`,
 	            research_interest: "主要的研究方向是光场（Light Field）/多视点图像处理。基于深度信息的多视点合成、显著性目标检测、压缩。",
