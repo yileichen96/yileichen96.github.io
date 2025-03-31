@@ -455,21 +455,9 @@
     </div>
 
 
-    <div id='footer' class='vspace-top'>
-    <div>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-        <td style="padding:0px">
-        <br>
-        <p style="text-align:right;font-size:small;">
-          This website template from <a href="https://www.vincentsitzmann.com/">here</a>. <br>
-          Last updated April 2025.
-        </p>
-        </td>
-      </tr>
-      </tbody>
-      </table>
+    <div id='footer'>
+        <p style="text-align:right;font-size:small;" data-translate="footer.note"></p>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -497,9 +485,11 @@
 	    publications_other: {
 		    title: "Other Authored Publications",
 	    },
-            lastUpdated: "Last updated December 2023.",
-            // 添加其他需要翻译的文本
+            footer: {
+                note: "This website template is adapted from <a href='https://www.vincentsitzmann.com/'>here</a>.<br>Last updated April 2025."
+            } 
         },
+	// 对应中文翻译
         zh: {
             header: {
                 name: "陈亦雷（Yilei Chen）",
@@ -518,8 +508,9 @@
 	    publications_other: {
 		    title: "其他论文",
 	    },
-            lastUpdated: "最后更新于2023年12月。",
-            // 对应中文翻译
+            footer: {
+                note: "网页模板参考自<a href='https://www.vincentsitzmann.com/'>此处</a>。<br>最后更新于2025年4月。"
+            }        
         }
     };
 
