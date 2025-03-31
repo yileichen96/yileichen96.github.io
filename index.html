@@ -533,14 +533,6 @@
 			el.innerHTML = value; // 使用innerHTML保留超链接
 		}
 	});
-
-        // 更新动态内容
-        document.querySelector('#header-text-name').textContent = lang === 'en' ? 'Yilei Chen' : '陈亦雷（Yilei Chen）';
-        document.querySelector('#header-text-title').textContent = lang === 'en' ? 
-            'Collaborative Ph.D. Student' : '联合培养博士研究生';
-        document.querySelector('#header-text-affiliation').textContent = lang === 'en' ? 
-            'Shanghai University; University of Technology Sydney' : '上海大学；悉尼科技大学';
-        // 添加其他需要动态更新的内容
     }
 
     function setLanguage(lang) {
