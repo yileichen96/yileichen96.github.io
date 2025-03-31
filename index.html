@@ -77,6 +77,25 @@
           .paper-authors {
             font-style: italic;
           }
+	  .paper-summary {
+	    font-size: 0.95rem;
+	    line-height: 1.6;
+            border-left: 3px solid #4F6071;
+	  }
+	  .paper-summary dt {
+            font-weight: 600;
+            margin-top: 0.8rem;
+            color: #2c3e50;
+          }
+	  .paper-summary dd {
+            margin-left: 1.5rem;
+            color: #4F6071;
+          }
+	  .badge {
+            font-size: 0.85em;
+            padding: 0.4em 0.8em;
+            margin-right: 0.5rem;
+          }
 	  /* 添加语言切换按钮样式 */
           #language-switcher {
 		  position: fixed;
@@ -164,9 +183,29 @@
                             <b>Yilei Chen</b>*, Gongyang Li*, Ping An, Zhi Liu, Xinpeng Huang, Qiang Wu 
                         </div>
 		        <br> 
-		        <div>
-                            背景：显著性目标检测（Salient Object Detection，SOD）将图像中最吸引人类注意力的目标以二值化的形式进行识别，可广泛应用于视频/图像压缩、图像编辑、视觉追踪和对象分割等下游任务。光场SOD是将光场数据提供的深度信息作为RGB 图像纹理信息的关键补充，以此进一步提升SOD 检测精度。<br>解决的问题：光场SOD太过依赖从大量视点获取深度信息，影响实际应用。<br>方法：基于低秩约束探索结构化光场的视点冗余特性，定义关键稀疏视点表示，并仅利用关键稀疏视点表示中的深度信息；设计的RGB-光场双流特征-显著图交互机制充分发挥深度信息进行SOD。<br>实验结果：在显著减少视点数量（49→5）的情况下，实现最先进的SOD性能，并且在推理速度上达到当前光场显著性目标检测的最快水平，为光场数据的实际应用提供了高效解决方案。
-                        </div>
+		        <div class="paper-summary bg-light p-3 rounded">
+            <dl class="mb-0">
+                <dt class="text-primary">📖 背景：</dt>
+                <dd class="mb-2">
+                    显著性目标检测（Salient Object Detection，SOD）将图像中最吸引人类注意力的目标以二值化的形式进行识别，可广泛应用于视频/图像压缩、图像编辑、视觉追踪和对象分割等下游任务。光场SOD是将光场数据提供的深度信息作为RGB图像纹理信息的关键补充，以此进一步提升SOD检测精度。
+                </dd>
+
+                <dt class="text-primary">❓ 解决的问题：</dt>
+                <dd class="mb-2">
+                    光场SOD太过依赖从大量视点获取深度信息，影响实际应用。
+                </dd>
+
+                <dt class="text-primary">💡 方法：</dt>
+                <dd class="mb-2">
+                    基于低秩约束探索结构化光场的视点冗余特性，定义关键稀疏视点表示，并仅利用关键稀疏视点表示中的深度信息；设计的RGB-光场双流特征-显著图交互机制充分发挥深度信息进行SOD。
+                </dd>
+
+                <dt class="text-primary">✅ 实验结果：</dt>
+                <dd class="mb-0">
+                    在显著减少视点数量（49→5）的情况下，实现最先进的SOD性能，并且在推理速度上达到当前光场显著性目标检测的最快水平，为光场数据的实际应用提供了高效解决方案。
+                </dd>
+            </dl>
+        </div>
                     </div>
                 </div>
 
