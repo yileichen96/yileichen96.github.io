@@ -490,7 +490,7 @@
         en: {
             bio: {
 		    title: "Bio",
-		    content: "I'm currently working toward the collaborative Ph.D. degree between Shanghai University supervised by Prof. Ping An and the University of Technology Sydney supervised by A/Prof. Qiang Wu. Before that, I received my B.E. degree, in 2018, from the School of Communication and Information Engineering, Shanghai University, Shanghai, China.",
+		    content: `I'm currently working toward the collaborative Ph.D. degree between Shanghai University supervised by <a href="https://scie-ie.shu.edu.cn/info/1078/1139.htm">Prof. Ping An</a> and the University of Technology Sydney supervised by <a href="https://profiles.uts.edu.au/qiang.wu">A/Prof. Qiang Wu</a>. Before that, I received my B.E. degree in 2018 from the School of Communication and Information Engineering, Shanghai University.`,
 	            research_interest: "My research interests include light field/multi-view image processing.",
 	    },
 	    publications_first: {
@@ -505,7 +505,7 @@
         zh: {
             bio: {
 		    title: "个人简介",
-		    content: "我目前为上海大学（Shanghai University，SHU）和悉尼科技大学（University of Technology，UTS）双学位联合培养博士研究生，导师为上海大学<a href="https://scie-ie.shu.edu.cn/info/1078/1139.htm">安平</a>教授与悉尼科技大学<a href="https://profiles.uts.edu.au/qiang.wu">Qiang Wu</a>副教授。2018年于上海大学通信与信息工程学院获得工学学士学位。",
+		    content: `我目前为上海大学（Shanghai University，SHU）和悉尼科技大学（University of Technology，UTS）双学位联合培养博士研究生，导师为上海大学<a href="https://scie-ie.shu.edu.cn/info/1078/1139.htm">安平</a>教授与悉尼科技大学<a href="https://profiles.uts.edu.au/qiang.wu">Qiang Wu</a>副教授。2018年于上海大学通信与信息工程学院获得工学学士学位。`,
 	            research_interest: "主要的研究方向是光场（Light Field）/多视点图像处理。基于深度信息的多视点合成、显著性目标检测、压缩。",
 	    },
             publications_first: {
@@ -522,11 +522,13 @@
     function updateContent(lang) {
         // 通用翻译处理
         document.querySelectorAll('[data-translate]').forEach(el => {
-            const keys = el.dataset.translate.split('.');
-            let value = translations[lang];
-            keys.forEach(key => value = value?.[key]);
-            if (value) el.innerHTML = value;
-        });
+		const keys = el.dataset.translate.split('.');
+		let value = translations[lang];
+		keys.forEach(key => value = value?.[key]);
+		if (value) {
+			el.innerHTML = value; // 使用innerHTML保留超链接
+		}
+	});
 
         // 更新动态内容
         document.querySelector('#header-text-name').textContent = lang === 'en' ? 'Yilei Chen' : '陈亦雷（Yilei Chen）';
