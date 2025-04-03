@@ -78,35 +78,31 @@
             font-style: italic;
           }
 	  .technical-abstract {
-    font-size: 0.95rem;
-}
-
-.abstract-title {
-    font-weight: 500;
-    color: #2c3e50;
-    letter-spacing: 0.5px;
-}
-
-.abstract-paragraph {
-    margin-bottom: 1.2rem;
-    line-height: 1.7;
-    color: #4a5568;
-}
-
-.abstract-paragraph strong {
-    color: #2c3e50;
-    font-weight: 500;
-}
-
-/* 增强印刷质感 */
-@media print {
-    .technical-abstract {
-        break-inside: avoid;
-    }
-    .resource-links {
-        display: none;
-    }
-}
+            font-size: 0.95rem;
+          }
+	  .abstract-title {
+            font-weight: 500;
+            color: #2c3e50;
+            letter-spacing: 0.5px;
+          }
+          .abstract-paragraph {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+            color: #4a5568;
+          }
+          .abstract-paragraph strong {
+            color: #2c3e50;
+            font-weight: 500;
+          }
+   /* 增强印刷质感 */
+      @media print {
+          .technical-abstract {
+            break-inside: avoid;
+          }
+          .resource-links {
+            display: none;
+          }
+      }
 	  /* 添加语言切换按钮样式 */
           #language-switcher {
 		  position: fixed;
