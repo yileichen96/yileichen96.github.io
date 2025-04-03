@@ -285,10 +285,8 @@
 		        <br> 
 		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
-                            <p class="abstract-paragraph">
-                            一种用于高质量非结构化视点合成的泛化神经辐射场（Generalizable Neural Radiance Field，GNeRF）方法。
-                            </p>
-                       </div>
+                            <p class="abstract-paragraph" data-translate="papers.vfavet.abstract1"></p>
+                        </div>
                     </div>
                 </div>
 		    
@@ -713,7 +711,77 @@
 	    },
             footer: {
                 note: "This website template is adapted from <a href='https://www.vincentsitzmann.com/'>here</a>.<br>Last updated April 2025."
-            } 
+            }
+	    papers: {
+            // Volume Feature Aware View-Epipolar Transformers
+            vfavet: {
+                abstract1: "A generalizable neural radiance field (GNeRF) method for high-quality unstructured view synthesis.",
+            },
+            // Enhanced Light Field Reconstruction
+            elfr: {
+                abstract1: "Through disparity-aware masking mechanism, adaptively combines the advantages of explicit depth reconstruction pipeline (based on disparity map estimation and warping) and implicit depth reconstruction pipeline (directly models inter-view correspondence without disparity maps) in anti-aliasing capability for large disparity regions and detail recovery for small disparity regions.",
+                abstract2: "<strong>Methods:</strong> (1) Parallel dual-branch framework generating dense light fields through two reconstruction pipelines; (2) Efficient decoupling extraction of disparity/texture information based on plane sweep volume (PSV); (3) Disparity-guided mask generation method with learnable thresholds."
+            },
+            // Disparity Enhancement-based Light Field Angular Super-Resolution
+            delfasr: {
+                abstract1: "Improves reconstructed view quality from the perspective of disparity map enhancement, using learnable morphological filtering to adaptively optimize estimated disparity values at object edges.",
+                abstract2: "<strong>Methods:</strong> (1) Explicit depth light field reconstruction algorithm based on disparity map estimation and warping; (2) Disparity map estimation based on plane sweep volume (PSV); (3) Learnable morphological filtering."
+            },
+            // Geometry-Assisted Multi-Representation View Reconstruction Network
+            gamrnet: {
+                abstract1: "Fully utilizes multiple representations of light fields to achieve dense light field reconstruction.",
+                abstract2: "<strong>Methods:</strong> (1) Dense light field reconstruction method under multiple light field representations; (2) Geometry-assisted optimization module."
+            },
+            // Prediction-Oriented Disparity Rectification Model
+            podr: {
+                abstract1: "A view prediction quality-guided disparity map rectification algorithm that optimizes 4D correlation of disparity maps.",
+                abstract2: "<strong>Methods:</strong> (1) Light field compression algorithm transmitting sparse views + disparity map; (2) 4D correlation optimization of disparity maps; (3) Iterative calculation of disparity deviation."
+            },
+            // Light Field Compression Using Global Multiplane Representation
+            lfcgmp: {
+                abstract1: "Applies multiplane image (MPI) representation generated from sparse views to light field compression.",
+                abstract2: "<strong>Methods:</strong> (1) Light field compression algorithm transmitting sparse views; (2) MPI generation based on plane sweep volume (PSV); (3) Key sparse view selection."
+            },
+            // Low Bitrate Light Field Compression With Geometry and Content Consistency
+            lfcgcc: {
+                abstract1: "Improves angular-spatial consistency of predicted light fields at decoder.",
+                abstract2: "<strong>Methods:</strong> (1) Light field compression algorithm transmitting sparse views + disparity map; (2) View image-guided disparity map optimization; (3) Sparse view sorting."
+            },
+            // Energy-Driven Reference Selection for Hierarchical Light Field Compression
+            edrs: {
+                abstract1: "Selects key sparse views based on scene content.",
+                abstract2: "<strong>Methods:</strong> (1) Light field compression algorithm transmitting sparse views + disparity map; (2) Key sparse view selection; (3) Hierarchical prediction structure."
+            },
+            // Light Field Salient Object Detection With Sparse Views
+            lfsod: {
+                abstract1: "Defines key sparse view representation for structured light fields to solve practical deployment difficulties.",
+                abstract2: "<strong>Methods:</strong> (1) Key sparse view representation through low-rank constraints; (2) RGB-light field dual-stream interaction mechanism."
+            },
+            // Mask-Aware Light Field De-Occlusion
+            malfd: {
+                abstract1: "Includes foreground occluder localization and occluded content restoration.",
+                abstract2: "<strong>Methods:</strong> (1) Mask-guided gated convolution; (2) Texture-semantic attention mechanism; (3) Knowledge distillation."
+            },
+            // Light Field Occlusion Removal Network
+            lforn: {
+                abstract1: "Achieves better scene occluder removal effects than single 2D images.",
+                abstract2: "<strong>Methods:</strong> Two subnetworks respectively utilize multi-view information."
+            },
+            // Light Field Stitching Via Mesh Deformation Alignment
+            lfsmda: {
+                abstract1: "Uses local meshes with geometric constraints based on disparity maps.",
+                abstract2: "<strong>Methods:</strong> (1) Propagates mesh deformation control points; (2) 2D graph cut guided by low-rank characteristics."
+            },
+            // Modified Baseline for Light Field Stitching
+            mblfs: {
+                abstract1: "Extends the baseline method of 2D image stitching to 4D light fields.",
+                abstract2: "<strong>Methods:</strong> (1) Propagation of feature point matching relationships; (2) 4D homography matrix parameter estimation; (3) Improved 2D graph cut."
+            },
+            // Fast and Accurate Homography Estimation
+            fahom: {
+                abstract1: "Uses deep learning to estimate homography matrices.",
+                abstract2: "<strong>Methods:</strong> Basic network structure based on ShuffleNetV2 compression units."
+            }
         },
 	// 对应中文翻译
         zh: {
@@ -735,7 +803,77 @@
 	    },
             footer: {
                 note: "网页模板参考自<a href='https://www.vincentsitzmann.com/'>此处</a>。<br>最后更新于2025年4月。"
-            }        
+            }
+	    papers: {
+            // Volume Feature Aware View-Epipolar Transformers
+	            vfavet: {
+			    abstract1: "一种用于高质量非结构化视点合成的泛化神经辐射场（Generalizable Neural Radiance Field，GNeRF）方法。",
+		    },
+            // Enhanced Light Field Reconstruction
+            elfr: {
+                abstract1: "通过视差感知的掩膜机制，自适应结合显式深度重构流程（基于视差图估计与warping）与隐式深度重构流程（不依靠视差图，直接隐式建模视点间对应关系完成纹理映射）分别在大视差区域的抗混叠能力和小视差区域的细节恢复优势。",
+                abstract2: "<strong>方法：</strong>(1) 并行的双分支框架，通过两类重构流程的稠密光场生成；(2) 基于平面扫描体（PSV）的视差/纹理信息高效解耦提取；(3) 基于可学习阈值的视差引导掩膜生成方法。"
+            },
+            // Disparity Enhancement-based Light Field Angular Super-Resolution
+            delfasr: {
+                abstract1: "从视差图增强的角度提升重构视点质量，通过可学习的形态学滤波对场景物体边缘处估计的视差值进行自适应优化。",
+                abstract2: "<strong>方法：</strong>(1) 基于视差图估计与warping的显式深度光场重构算法；(2) 基于平面扫描体（PSV）的视差图估计；(3) 可学习的形态学滤波。"
+            },
+            // Geometry-Assisted Multi-Representation View Reconstruction Network
+            gamrnet: {
+                abstract1: "充分利用光场多种表示形式实现稠密光场重构。",
+                abstract2: "<strong>方法：</strong>(1) 光场多种表示形式下的稠密光场重构方法；(2) 几何辅助的优化模块。"
+            },
+            // Prediction-Oriented Disparity Rectification Model
+            podr: {
+                abstract1: "以视点预测质量引导的视差图校正算法，优化视差图4D关联性。",
+                abstract2: "<strong>方法：</strong>(1) 编码端传输稀疏视点+视差图、解码端基于视差图预测的光场压缩算法；(2) 多视点图像阵列结构先验引导的视差图4D关联性优化；(3) 根据视点预测质量迭代计算视差偏离量。"
+            },
+            // Light Field Compression Using Global Multiplane Representation
+            lfcgmp: {
+                abstract1: "将稀疏视点生成的多平面图像（MPI）表示应用于光场压缩。",
+                abstract2: "<strong>方法：</strong>(1) 编码端传输稀疏视点、解码端基于MPI预测的光场压缩算法；(2) 基于平面扫描体（PSV）的MPI生成；(3) 通过预测质量统计的关键稀疏视点选择。"
+            },
+            // Low Bitrate Light Field Compression With Geometry and Content Consistency
+            lfcgcc: {
+                abstract1: "通过同时考虑稀疏视点间内容一致性与传输视差图几何一致性，提升解码端预测光场的角度-空间一致性。",
+                abstract2: "<strong>方法：</strong>(1) 编码端传输稀疏视点+视差图、解码端基于视差图预测的光场压缩算法；(2) 视点图像引导的视差图优化；(3) 基于内容相似性的稀疏视点排序。"
+            },
+            // Energy-Driven Reference Selection for Hierarchical Light Field Compression
+            edrs: {
+                abstract1: "根据场景内容选择关键稀疏视点。",
+                abstract2: "<strong>方法：</strong>(1) 编码端传输稀疏视点+视差图、解码端基于视差图预测的光场压缩算法；(2) 低秩分析下能量保留程度驱动的关键稀疏视点选择；(3) 基于关键稀疏视点的分层预测结构。"
+            },
+            // Light Field Salient Object Detection With Sparse Views
+            lfsod: {
+                abstract1: "通过定义结构化光场的关键稀疏视点表示，解决传统光场显著性目标检测方法依赖密集视点提供深度信息的问题。",
+                abstract2: "<strong>方法：</strong>(1) 通过低秩约束定义结构化光场的关键稀疏视点表示；(2)设计RGB-光场双流"特征-显著图交互"机制。"
+            },
+            // Mask-Aware Light Field De-Occlusion
+            malfd: {
+                abstract1: "包括前景遮挡物定位（掩膜）与被遮挡内容恢复两个步骤。",
+                abstract2: "<strong>方法：</strong>(1) 由掩膜引导的门卷积；(2) 纹理-语义注意力机制；(3)基于无遮挡图像特征的知识蒸馏。"
+            },
+            // Light Field Occlusion Removal Network
+            lforn: {
+                abstract1: "实现比单一2D图像更优的场景遮挡物去除效果。",
+                abstract2: "<strong>方法：</strong>两个子网络分别利用光场的多视点信息。"
+            },
+            // Light Field Stitching Via Mesh Deformation Alignment
+            lfsmda: {
+                abstract1: "采用局部网格并施加基于视差图的几何约束。",
+                abstract2: "<strong>方法：</strong>(1) 由拼接后的中心视点图像根据视差图传播网格变形控制点；(2) 光场低秩特性引导下的2D图割。"
+            },
+            // Modified Baseline for Light Field Stitching
+            mblfs: {
+                abstract1: "将2D图像拼接的基线方法扩展至4D光场。",
+                abstract2: "<strong>方法：</strong>(1) 基于中心视点视差图的特征点匹配关系传播；(2) 基于直接线性变换（DLT）算法的4D单应性矩阵参数估计；(3) 改进的2D图割。"
+            },
+            // Fast and Accurate Homography Estimation
+            fahom: {
+                abstract1: "采用深度学习估计单应性矩阵。",
+                abstract2: "<strong>方法：</strong>基于ShuffleNetV2压缩单元的基础网络结构。"
+            } 
         }
     };
 
