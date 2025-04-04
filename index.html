@@ -472,8 +472,7 @@
                         <div class='paper-authors'>
                             <b>Yilei Chen</b>*, Gongyang Li*, Ping An, Zhi Liu, Xinpeng Huang, Qiang Wu 
                         </div>
-		        <br> 
-		        <!-- 技术摘要区块 -->
+		        <br>
                         <div class="technical-abstract border-top pt-3">
 			    <p class="abstract-paragraph" data-translate="publications.LFSOD.CDINet.summary"></p>
                             <p class="abstract-paragraph" data-translate="publications.LFSOD.CDINet.method"></p>
@@ -501,7 +500,6 @@
                             Jieyu Chen, Ping An, Xinpeng Huang, <b>Yilei Chen</b>, Chao Yang, Liquan Shen
                         </div>
 		        <br> 
-		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
                             <p class="abstract-paragraph" data-translate="publications.LFDeocc.MANet.summary"></p>
                             <p class="abstract-paragraph" data-translate="publications.LFDeocc.MANet.method"></p>
@@ -526,7 +524,6 @@
                             Shiao Zhang, <b>Yilei Chen</b>, Ping An, Xinpeng Huang, Chao Yang
                         </div>
 		        <br> 
-		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
                             <p class="abstract-paragraph" data-translate="publications.LFDeocc.LFORNet.summary"></p>
                             <p class="abstract-paragraph" data-translate="publications.LFDeocc.LFORNet.method"></p>
@@ -535,7 +532,7 @@
 	        </div>
 
 		<div class='vspace-top'>
-		    <p> 5）多光场拼接</p>
+		    <p data-translate="publications.LFS.title"></p>
 		</div>
 		<div class='row'>
                     <div class="col-sm-3">
@@ -553,14 +550,9 @@
                             <b>Yilei Chen</b>, Ping An, Chao Xue, Xinpeng Huang
                         </div>
 			<br> 
-		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
-                            <p class="abstract-paragraph">
-                            采用局部网格并施加基于视差图的几何约束，实现光场间更好的对齐，并根据光场低秩特性设计在基图像的2D图割，在极大减少计算量的同时，取得与4D图割相似的融合质量。
-                            </p>
-                            <p class="abstract-paragraph">
-                            <strong>方法：</strong>(1) 由拼接后的中心视点图像根据视差图传播网格变形控制点；(2) 光场低秩特性引导下的2D图割，简化4D图割计算量。
-			    </p>
+                            <p class="abstract-paragraph" data-translate="publications.LFS.MDALRF.summary"></p>
+                            <p class="abstract-paragraph" data-translate="publications.LFS.MDALRF.method"></p>
                        </div>
                     </div>
                 </div>
@@ -581,14 +573,9 @@
                             <b>Yilei Chen</b>, Ping An, Xinpeng Huang, Chunli Meng, Qiang Wu 
                         </div>
 			<br> 
-		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
-                            <p class="abstract-paragraph">
-                            将2D图像拼接的基线方法（特征点提取与匹配→单应性矩阵估计与图像对齐→重叠区域的2D图割融合）扩展至4D光场，实现保留空间-角度一致性的光场拼接，扩大所有视点图像的视场。
-                            </p>
-                            <p class="abstract-paragraph">
-                            <strong>方法：</strong>(1) 基于中心视点视差图的特征点匹配关系传播；(2) 基于直接线性变换（DLT）算法和Levenberg-Marquardt优化的4D单应性矩阵参数估计；(3) 相邻视点信息参与的改进2D图割（伪4D图割）。
-			    </p>
+                            <p class="abstract-paragraph" data-translate="publications.LFS.MBLFS.summary"></p>
+                            <p class="abstract-paragraph" data-translate="publications.LFS.MBLFS.method"></p>
                        </div>
                     </div>
                 </div>
@@ -609,14 +596,9 @@
                             <b>Yilei Chen</b>, Guoping Wang, Ping An, Zhixiang You, Xinpeng Huang
                         </div>
 			<br> 
-		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
-                            <p class="abstract-paragraph">
-                            采用深度学习估计单应性矩阵，缓解图像间更大偏移下特征匹配的难题，并提出一种高效且具有可扩展性的单应性矩阵网络设计。
-                            </p>
-                            <p class="abstract-paragraph">
-                            <strong>方法：</strong>(1) 基于ShuffleNetV2压缩单元的基础网络结构和两种提升预测精度的扩展性结构，更好地平衡单应性矩阵估计精度和推断速度。
-			    </p>
+                            <p class="abstract-paragraph" data-translate="publications.LFS.ShuffleHomoNet.summary"></p>
+                            <p class="abstract-paragraph" data-translate="publications.LFS.ShuffleHomoNet.method"></p>
                        </div>
                     </div>
                 </div>
@@ -734,6 +716,21 @@
 				    method: "Methods: (1) Two subnetworks respectively utilize multi-view information of light fields to locate foreground occluders (based on mask) and restore occluded content.",
 			    },
 		    },
+		    LFS: {
+			    title: "5) Multi-Light Field Stitching",
+			    MDALRF: {
+				    summary: "Uses local meshes with geometric constraints based on disparity maps to achieve better alignment between light fields, and designs 2D graph cut on base images guided by low-rank characteristics of light fields, achieving similar fusion quality to 4D graph cut while greatly reducing computational complexity.",
+				    method: "Methods: (1) Propagates mesh deformation control points from stitched center view images according to disparity maps; (2) 2D graph cut guided by low-rank characteristics of light fields to simplify 4D graph cut computation.",
+			    },
+			    MBLFS: {
+				    summary: "Extends the baseline method of 2D image stitching (feature point extraction and matching → homography matrix estimation and image alignment → 2D graph cut fusion in overlapping regions) to 4D light fields, achieving light field stitching that preserves spatial-angular consistency and expands the field of view of all view images.",
+				    method: "Methods: (1) Propagation of feature point matching relationships based on center view disparity maps; (2) 4D homography matrix parameter estimation based on direct linear transform (DLT) algorithm and Levenberg-Marquardt optimization; (3) Improved 2D graph cut (pseudo-4D graph cut) with participation of adjacent view information.",
+			    },
+			    ShuffleHomoNet: {
+				    summary: "Uses deep learning to estimate homography matrices, alleviating the difficulty of feature matching under larger displacements between images, and proposes an efficient and extensible homography matrix network design.",
+				    method: "Methods: (1) Basic network structure based on ShuffleNetV2 compression units and two extensible structures to improve prediction accuracy, better balancing homography matrix estimation accuracy and inference speed.",
+			    },
+		    },
 	    },
 	    publications_other: {
 		    title: "Other Authored Publications",
@@ -840,6 +837,21 @@
 			    LFORNet: {
 				    summary: "在光场中，由于中心视点被遮挡的场景内容会被其他视点记录，可实现遮挡物去除。围绕这一特性设计网络，实现比单一2D图像更优的场景遮挡物去除效果。",
 				    method: "方法：(1) 两个子网络分别利用光场的多视点信息定位前景遮挡物（基于掩膜）以及恢复被遮挡内容。",
+			    },
+		    },
+		    LFS: {
+			    title: "5）多光场拼接",
+			    MDALRF: {
+				    summary: "采用局部网格并施加基于视差图的几何约束，实现光场间更好的对齐，并根据光场低秩特性设计在基图像的2D图割，在极大减少计算量的同时，取得与4D图割相似的融合质量。",
+				    method: "方法：(1) 由拼接后的中心视点图像根据视差图传播网格变形控制点；(2) 光场低秩特性引导下的2D图割，简化4D图割计算量。",
+			    },
+			    MBLFS: {
+				    summary: "将2D图像拼接的基线方法（特征点提取与匹配→单应性矩阵估计与图像对齐→重叠区域的2D图割融合）扩展至4D光场，实现保留空间-角度一致性的光场拼接，扩大所有视点图像的视场。",
+				    method: "方法：(1) 基于中心视点视差图的特征点匹配关系传播；(2) 基于直接线性变换（DLT）算法和Levenberg-Marquardt优化的4D单应性矩阵参数估计；(3) 相邻视点信息参与的改进2D图割（伪4D图割）。",
+			    },
+			    ShuffleHomoNet: {
+				    summary: "采用深度学习估计单应性矩阵，缓解图像间更大偏移下特征匹配的难题，并提出一种高效且具有可扩展性的单应性矩阵网络设计。",
+				    method: "方法：(1) 基于ShuffleNetV2压缩单元的基础网络结构和两种提升预测精度的扩展性结构，更好地平衡单应性矩阵估计精度和推断速度。",
 			    },
 		    },
 	    },
