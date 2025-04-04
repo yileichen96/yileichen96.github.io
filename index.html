@@ -304,10 +304,8 @@
 		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
 			    <p class="abstract-paragraph" data-translate="publications.LFR.ELFR.summary"></p>
-                            <p class="abstract-paragraph">
-                            通过视差感知的掩膜机制，自适应结合显式深度重构流程（基于视差图估计与warping）与隐式深度重构流程（不依靠视差图，直接隐式建模视点间对应关系完成纹理映射）分别在大视差区域的抗混叠能力和小视差区域的细节恢复优势，在不同重构任务（2×2→7×7内插、外插，4→7×7灵活重构）实现更高的质量。
-                            </p>
-                            <p class="abstract-paragraph">
+                            <p class="abstract-paragraph" data-translate="publications.LFR.ELFR.method"></p>
+			    <p class="abstract-paragraph">
                             <strong>方法：</strong>(1) 并行的双分支框架，通过两类重构流程的稠密光场生成；(2) 基于平面扫描体（PSV）的视差/纹理信息高效解耦提取；(3) 基于可学习阈值的视差引导掩膜生成方法，充分发挥两类光场在不同视差区域的优势。
 			    </p>
                        </div>
@@ -731,6 +729,7 @@
 			    },
 			    ELFR:{
 				    summary: "Through disparity-guided masking mechanism, adaptively combines the advantages of explicit-depth-based reconstruction pipeline (based on disparity map estimation and warping) and implicit-depth-based reconstruction pipeline (directly models inter-view correspondence without disparity maps) in anti-aliasing ability for large disparity regions and detail recovery for small disparity regions, achieving higher quality in different reconstruction tasks (2×2→7×7 interpolation, extrapolation, 4→7×7 flexible reconstruction).",
+				    method: "Methods: (1) Parallel dual-branch framework generating dense light fields through two reconstruction pipelines; (2) Efficient decoupling extraction of disparity/texture information based on plane sweep volume (PSV); (3) Disparity-guided mask generation method with learnable thresholds to fully utilize the advantages of two types of light fields in different disparity regions."
 			    },
 		    },
 	    },
@@ -793,6 +792,7 @@
 			    },
 			    ELFR:{
 				    summary: "通过视差感知的掩膜机制，自适应结合显式深度重构流程（基于视差图估计与warping）与隐式深度重构流程（不依靠视差图，直接隐式建模视点间对应关系完成纹理映射）分别在大视差区域的抗混叠能力和小视差区域的细节恢复优势，在不同重构任务（2×2→7×7内插、外插，4→7×7灵活重构）实现更高的质量。",
+				    method: "方法：(1) 并行的双分支框架，通过两类重构流程的稠密光场生成；(2) 基于平面扫描体（PSV）的视差/纹理信息高效解耦提取；(3) 基于可学习阈值的视差引导掩膜生成方法，充分发挥两类光场在不同视差区域的优势。"
 			    },
 		    },
 	    },
