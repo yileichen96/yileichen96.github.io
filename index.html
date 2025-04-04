@@ -351,12 +351,8 @@
 		        <br> 
 		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
-                            <p class="abstract-paragraph">
-                            充分利用光场多种表示形式（透镜图像、多视点图像阵列和伪视频序列）实现稠密光场重构，并通过光场间空间-角度信息和光场内几何信息进一步优化重构结果。
-                            </p>
-                            <p class="abstract-paragraph">
-                            <strong>方法：</strong>(1) 光场多种表示形式下的稠密光场重构方法；(2) 几何辅助的优化模块。
-			    </p>
+                            <p class="abstract-paragraph" data-translate="publications.LFR.GAMRNet.summary"></p>
+			    <p class="abstract-paragraph" data-translate="publications.LFR.GAMRNet.method"></p>
                        </div>
                     </div>
                 </div>
@@ -728,6 +724,10 @@
 				    summary: "Improves reconstructed view quality from the perspective of disparity map enhancement, using learnable morphological filtering to adaptively optimize estimated disparity values at object edges, alleviating incorrect sampling content caused by occlusion in explicit-depth-based reconstruction pipeline, achieving state-of-the-art performance on large baseline light field datasets.",
 				    method: "Methods: (1) Explicit-depth-based light field reconstruction algorithm based on disparity map estimation and warping; (2) Disparity map estimation based on plane sweep volume (PSV); (3) Learnable morphological filtering (dilation and erosion) to adaptively correct disparity values at object edges."
 			    },
+			    GAMRNet:{
+				    summary: "Fully utilizes multiple representations of light fields (lenslet images, multi-view image arrays, and pseudo-video sequences) to achieve dense light field reconstruction, and further refines reconstruction results through inter-light field spatial-angular information and intra-light field geometric information.",
+				    method: "Methods: (1) Dense light field reconstruction method under multiple light field representations; (2) Geometry-assisted refinement module."
+			    },
 		    },
 	    },
 	    publications_other: {
@@ -794,6 +794,10 @@
 			    DELFASR:{
 				    summary: "从视差图增强的角度提升重构视点质量，通过可学习的形态学滤波对场景物体边缘处估计的视差值进行自适应优化，缓解显式深度重构流程中由于遮挡导致的不正确采样内容，在大基线光场数据集达到先进性能。",
 				    method: "方法：(1) 基于视差图估计与warping的显式深度光场重构算法；(2) 基于平面扫描体（PSV）的视差图估计；(3) 可学习的形态学滤波（膨胀和腐蚀），自适应修正物体边缘处的视差值。"
+			    },
+			    GAMRNet:{
+				    summary: "充分利用光场多种表示形式（透镜图像、多视点图像阵列和伪视频序列）实现稠密光场重构，并通过光场间空间-角度信息和光场内几何信息进一步优化重构结果。",
+				    method: "方法：(1) 光场多种表示形式下的稠密光场重构方法；(2) 几何辅助的优化模块。"
 			    },
 		    },
 	    },
