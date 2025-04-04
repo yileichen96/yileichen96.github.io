@@ -303,6 +303,7 @@
 		        <br> 
 		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
+			    <p class="abstract-paragraph" data-translate="publications.LFR.ELFR.summary"></p>
                             <p class="abstract-paragraph">
                             通过视差感知的掩膜机制，自适应结合显式深度重构流程（基于视差图估计与warping）与隐式深度重构流程（不依靠视差图，直接隐式建模视点间对应关系完成纹理映射）分别在大视差区域的抗混叠能力和小视差区域的细节恢复优势，在不同重构任务（2×2→7×7内插、外插，4→7×7灵活重构）实现更高的质量。
                             </p>
@@ -728,6 +729,9 @@
 			    VET_3D: {
 				    summary: "A generalizable neural radiance field (GNeRF) method for high-quality unstructured view synthesis.",
 			    },
+			    ELFR:{
+				    summary: "Through disparity-guided masking mechanism, adaptively combines the advantages of explicit-depth-based reconstruction pipeline (based on disparity map estimation and warping) and implicit-depth-based reconstruction pipeline (directly models inter-view correspondence without disparity maps) in anti-aliasing ability for large disparity regions and detail recovery for small disparity regions, achieving higher quality in different reconstruction tasks (2×2→7×7 interpolation, extrapolation, 4→7×7 flexible reconstruction).",
+			    },
 		    },
 	    },
 	    publications_other: {
@@ -786,6 +790,9 @@
 			    title: "1）结构化/非结构化光场重构（结构化光场重构：角度域超分辨；非结构化光场重构：任意视点合成）",
 			    VET_3D: {
 				    summary: "一种用于高质量非结构化视点合成的泛化神经辐射场（Generalizable Neural Radiance Field，GNeRF）方法。",
+			    },
+			    ELFR:{
+				    summary: "通过视差感知的掩膜机制，自适应结合显式深度重构流程（基于视差图估计与warping）与隐式深度重构流程（不依靠视差图，直接隐式建模视点间对应关系完成纹理映射）分别在大视差区域的抗混叠能力和小视差区域的细节恢复优势，在不同重构任务（2×2→7×7内插、外插，4→7×7灵活重构）实现更高的质量。",
 			    },
 		    },
 	    },
