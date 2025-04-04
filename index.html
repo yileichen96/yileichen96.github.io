@@ -482,7 +482,7 @@
                 </div>
 
 		<div class='vspace-top'>
-		    <p> 4）光场前景去遮挡</p>
+		    <p data-translate="publications.LFDeocc.title"></p>
 		</div>
                 <div class='row'>
                     <div class="col-sm-3">
@@ -503,12 +503,8 @@
 		        <br> 
 		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
-                            <p class="abstract-paragraph">
-                            同样包括前景遮挡物定位（掩膜）与被遮挡内容恢复两个步骤，重点解决特征整合阶段对遮挡物和被遮挡区域的无区分处理，以及大面积遮挡区域下的纹理细节丢失。设计的网络同时具有轻量性。
-                            </p>
-                            <p class="abstract-paragraph">
-                            <strong>方法：</strong>(1) 由掩膜引导的门卷积，更好区分来自遮挡物和被遮挡区域的特征；(2) 纹理-语义注意力机制，增强恢复的被遮挡内容细节；(3)基于无遮挡图像特征的知识蒸馏，促进特征提取过程。
-			    </p>
+                            <p class="abstract-paragraph" data-translate="publications.LFDeocc.MANet.summary"></p>
+                            <p class="abstract-paragraph" data-translate="publications.LFDeocc.MANet.method"></p>
                        </div>
                     </div>
                 </div>
@@ -532,12 +528,8 @@
 		        <br> 
 		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
-                            <p class="abstract-paragraph">
-                            在光场中，由于中心视点被遮挡的场景内容会被其他视点记录，可实现遮挡物去除。围绕这一特性设计网络，实现比单一2D图像更优的场景遮挡物去除效果。
-                            </p>
-                            <p class="abstract-paragraph">
-                            <strong>方法：</strong>(1) 两个子网络分别利用光场的多视点信息定位前景遮挡物（基于掩膜）以及恢复被遮挡内容。
-			    </p>
+                            <p class="abstract-paragraph" data-translate="publications.LFDeocc.LFORNet.summary"></p>
+                            <p class="abstract-paragraph" data-translate="publications.LFDeocc.LFORNet.method"></p>
                        </div>
                     </div>
 	        </div>
@@ -731,6 +723,17 @@
 				    method: "Methods: (1) Defines key sparse view representation for structured light fields through low-rank constraints; (2) Designs RGB-light field dual-stream \"feature-saliency map interaction\" mechanism to fully utilize depth information from key sparse views for salient object detection.",
 			    },
 		    },
+		    LFDeocc: {
+			    title: "4) Light Field Foreground Occlusion Removal",
+			    MANet: {
+				    summary: "Also includes two steps: foreground occluder localization (mask) and occluded content restoration, focusing on solving the undifferentiated processing of occluders and occluded regions during feature integration stage, and texture detail loss in large occlusion areas. The designed network is also lightweight.",
+				    method: "Methods: (1) Mask-guided gated convolution to better distinguish features from occluders and occluded regions; (2) Texture-semantic attention mechanism to enhance details of restored occluded content; (3) Knowledge distillation based on unoccluded image features to promote feature extraction process.",
+			    },
+			    LFORNet: {
+				    summary: "In light fields, since scene content occluded in the center view is recorded by other views, occluder removal can be achieved. A network is designed around this characteristic to achieve better scene occluder removal effects than single 2D images.",
+				    method: "Methods: (1) Two subnetworks respectively utilize multi-view information of light fields to locate foreground occluders (based on mask) and restore occluded content.",
+			    },
+		    },
 	    },
 	    publications_other: {
 		    title: "Other Authored Publications",
@@ -818,7 +821,7 @@
 			    },
 			    EMH: {
 				    summary: "根据场景内容选择关键稀疏视点，并根据关键-非关键稀疏视点构建光场压缩分层预测结构。",
-				    method: "方法：(1) 编码端传输稀疏视点+视差图、解码端基于视差图预测的光场压缩算法；(2) 低秩分析下能量保留程度驱动的关键稀疏视点选择；(3) 基于关键稀疏视点的分层预测结构",
+				    method: "方法：(1) 编码端传输稀疏视点+视差图、解码端基于视差图预测的光场压缩算法；(2) 低秩分析下能量保留程度驱动的关键稀疏视点选择；(3) 基于关键稀疏视点的分层预测结构。",
 			    },
 		    },
 		    LFSOD: {
@@ -826,6 +829,17 @@
 			    CDINet: {
 				    summary: "通过定义结构化光场的关键稀疏视点表示，解决传统光场显著性目标检测方法依赖密集视点提供深度信息、在资源受限场景下实际部署存在困难的问题。在显著减少视点数量（49→5）的情况下，实现最先进的检测性能，并且在推理速度上达到当前光场显著性目标检测的最快水平，为光场数据的实际应用提供了高效解决方案。",
 				    method: "方法：(1) 通过低秩约束定义结构化光场的关键稀疏视点表示；(2)设计RGB-光场双流“特征-显著图交互”机制，充分发挥关键稀疏视点的深度信息进行显著性目标检测。",
+			    },
+		    },
+		    LFDeocc: {
+			    title: "4）光场前景去遮挡",
+			    MANet: {
+				    summary: "同样包括前景遮挡物定位（掩膜）与被遮挡内容恢复两个步骤，重点解决特征整合阶段对遮挡物和被遮挡区域的无区分处理，以及大面积遮挡区域下的纹理细节丢失。设计的网络同时具有轻量性。",
+				    method: "方法：(1) 由掩膜引导的门卷积，更好区分来自遮挡物和被遮挡区域的特征；(2) 纹理-语义注意力机制，增强恢复的被遮挡内容细节；(3)基于无遮挡图像特征的知识蒸馏，促进特征提取过程。",
+			    },
+			    LFORNet: {
+				    summary: "在光场中，由于中心视点被遮挡的场景内容会被其他视点记录，可实现遮挡物去除。围绕这一特性设计网络，实现比单一2D图像更优的场景遮挡物去除效果。",
+				    method: "方法：(1) 两个子网络分别利用光场的多视点信息定位前景遮挡物（基于掩膜）以及恢复被遮挡内容。",
 			    },
 		    },
 	    },
