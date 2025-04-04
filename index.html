@@ -455,7 +455,7 @@
 	        </div>
 
 		<div class='vspace-top'>
-		    <p> 3）光场显著性目标检测</p>
+		    <p data-translate="publications.LFSOD.title"></p>
 		</div>
                 <div class='row'>
                     <div class="col-sm-3">
@@ -475,6 +475,8 @@
 		        <br> 
 		        <!-- 技术摘要区块 -->
                         <div class="technical-abstract border-top pt-3">
+			    <p class="abstract-paragraph" data-translate="publications.LFSOD.CDINet.summary"></p>
+                            <p class="abstract-paragraph" data-translate="publications.LFSOD.CDINet.method"></p>
                             <p class="abstract-paragraph">
                             通过定义结构化光场的关键稀疏视点表示，解决传统光场显著性目标检测方法依赖密集视点提供深度信息、在资源受限场景下实际部署存在困难的问题。在显著减少视点数量（49→5）的情况下，实现最先进的检测性能，并且在推理速度上达到当前光场显著性目标检测的最快水平，为光场数据的实际应用提供了高效解决方案。
                             </p>
@@ -728,6 +730,13 @@
 				    method: "Methods: (1) Light field compression algorithm transmitting sparse views + disparity map at encoder and predicting based on disparity map at decoder; (2) Key sparse view selection driven by energy retention degree under low-rank analysis; (3) Hierarchical prediction structure based on key sparse views.",
 			    },
 		    },
+		    LFSOD: {
+			    title: "3) Light Field Salient Object Detection",
+			    CDINet: {
+				    summary: "Defines key sparse view representation for structured light fields to solve the practical deployment difficulties of traditional light field salient object detection methods that rely on dense views to provide depth information. Achieves state-of-the-art detection performance while significantly reducing the number of views (49→5), and reaches the fastest inference speed in current light field salient object detection, providing an efficient solution for practical applications of light field data.",
+				    method: "Methods: (1) Defines key sparse view representation for structured light fields through low-rank constraints; (2) Designs RGB-light field dual-stream 'feature-saliency map interaction' mechanism to fully utilize depth information from key sparse views for salient object detection.",
+			    },
+		    },
 	    },
 	    publications_other: {
 		    title: "Other Authored Publications",
@@ -816,6 +825,13 @@
 			    EMH: {
 				    summary: "根据场景内容选择关键稀疏视点，并根据关键-非关键稀疏视点构建光场压缩分层预测结构。",
 				    method: "方法：(1) 编码端传输稀疏视点+视差图、解码端基于视差图预测的光场压缩算法；(2) 低秩分析下能量保留程度驱动的关键稀疏视点选择；(3) 基于关键稀疏视点的分层预测结构",
+			    },
+		    },
+		    LFSOD: {
+			    title: "3）光场显著性目标检测",
+			    CDINet: {
+				    summary: "通过定义结构化光场的关键稀疏视点表示，解决传统光场显著性目标检测方法依赖密集视点提供深度信息、在资源受限场景下实际部署存在困难的问题。在显著减少视点数量（49→5）的情况下，实现最先进的检测性能，并且在推理速度上达到当前光场显著性目标检测的最快水平，为光场数据的实际应用提供了高效解决方案。",
+				    method: "方法：(1) 通过低秩约束定义结构化光场的关键稀疏视点表示；(2)设计RGB-光场双流“特征-显著图交互”机制，充分发挥关键稀疏视点的深度信息进行显著性目标检测。",
 			    },
 		    },
 	    },
